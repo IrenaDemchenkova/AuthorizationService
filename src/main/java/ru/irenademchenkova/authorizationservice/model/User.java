@@ -20,6 +20,11 @@ public class User {
 
     public User(){
     }
+
+    public User (String user, String password){
+        this.user = user;
+        this.password = password;
+    }
     public User(String user, String password, List<Authorities> authorities) {
         this.user = user;
         this.password = password;
