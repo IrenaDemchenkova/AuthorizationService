@@ -8,18 +8,16 @@ import java.util.Objects;
 
 public class User {
     @NotBlank
-    @Size (min = 2)
-    @Size (max = 15)
-    private String user;
+    @Size(min = 2)
+    @Size(max = 15)
+    private final String user;
     @NotBlank
-    @Size (min = 5)
-    @Size (max = 20)
-    private String password;
+    @Size(min = 5)
+    @Size(max = 20)
+    private final String password;
 
-    private List<Authorities> authorities;
+    private final List<Authorities> authorities;
 
-    public User(){
-    }
     public User(String user, String password, List<Authorities> authorities) {
         this.user = user;
         this.password = password;
@@ -30,24 +28,12 @@ public class User {
         return user;
     }
 
-    public void setUser(String user) {
-        this.user = user;
-    }
-
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public List<Authorities> getAuthorities() {
         return authorities;
-    }
-
-    public void setAuthorities(List<Authorities> authorities) {
-        this.authorities = authorities;
     }
 
     @Override
