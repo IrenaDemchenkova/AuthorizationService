@@ -8,6 +8,7 @@ import ru.irenademchenkova.authorizationservice.model.User;
 import ru.irenademchenkova.authorizationservice.repository.UserRepository;
 
 import java.util.List;
+
 @Service
 public class AuthorizationService {
     UserRepository userRepository;

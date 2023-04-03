@@ -12,17 +12,17 @@ import ru.irenademchenkova.authorizationservice.model.User;
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {
     @Override
     public boolean supportsParameter(MethodParameter parameter) {
-        if(! parameter.hasMethodAnnotation(GetMapping.class)){
+        if (!parameter.hasMethodAnnotation(GetMapping.class)) {
             return false;
         }
         return parameter.getParameterType().equals(String.class);
     }
 
     @Override
-    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer, NativeWebRequest webRequest, WebDataBinderFactory binderFactory) {
         HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
         String user = request.getParameter("user");
         String password = request.getParameter("password");
-        return new User("new"+ user,"new"+password);
+        return new User("new" + user, "new" + password);
     }
 }

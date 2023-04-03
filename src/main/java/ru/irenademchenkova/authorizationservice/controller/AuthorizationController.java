@@ -2,7 +2,6 @@ package ru.irenademchenkova.authorizationservice.controller;
 
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.irenademchenkova.authorizationservice.model.Authorities;
 import ru.irenademchenkova.authorizationservice.model.User;
