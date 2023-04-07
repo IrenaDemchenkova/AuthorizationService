@@ -12,16 +12,12 @@ public class User {
     @Size(max = 15)
     private final String user;
     @NotBlank
+
     @Size(min = 2)
     @Size(max = 20)
     private final String password;
 
-    private List<Authorities> authorities;
-
-    public User(String user, String password) {
-        this.user = user;
-        this.password = password;
-    }
+    private final List<Authorities> authorities;
 
     public User(String user, String password, List<Authorities> authorities) {
         this.user = user;
