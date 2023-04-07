@@ -19,8 +19,8 @@ public class UserRepository {
         usersList.put(user3.getUser(), user3);
     }
 
-    public List<Authorities> getUserAuthorities(String user, String password) {
-        User userToBeFound = usersList.get(user);
-        return (userToBeFound == null || !userToBeFound.getPassword().equals(password)) ? Collections.emptyList() : userToBeFound.getAuthorities();
+    public List<Authorities> getUserAuthorities(User user) {
+        User userToBeFound = usersList.get(user.getUser());
+        return (userToBeFound == null || !userToBeFound.getPassword().equals(user.getPassword())) ? Collections.emptyList() : userToBeFound.getAuthorities();
     }
 }

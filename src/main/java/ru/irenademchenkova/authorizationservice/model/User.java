@@ -12,7 +12,8 @@ public class User {
     @Size(max = 15)
     private final String user;
     @NotBlank
-    @Size(min = 5)
+
+    @Size(min = 2)
     @Size(max = 20)
     private final String password;
 
